@@ -1,0 +1,30 @@
+{
+  "name": "launch.anapp.now",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/lib/*.test.ts",
+    "creatives:placeholders": "python3 scripts/make-placeholder-creatives.py"
+  },
+  "dependencies": {
+    "geist": "^1.7.2",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "typescript": "^5.9.3"
+  }
+}
