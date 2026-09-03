@@ -33,7 +33,7 @@ export default function PrivacyPage() {
             </section>
             <section>
               <h2 style={{ fontSize: "1.25rem", marginBottom: "0.4rem" }}>Retention and contact</h2>
-              <p>An idea that never becomes a Chovy project is deleted after 7 days. To have it removed sooner, or to ask anything about this page, write to <a href="mailto:anthony@chovy.com">anthony@chovy.com</a>. Chovy's own product terms apply once you sign in at <a href={chovy}>chovy.com</a>.</p>
+              <p>An idea that never becomes a Chovy project is deleted after 7 days. To have it removed sooner, or to ask anything about this page, write to <a href="mailto:hello@chovy.com">hello@chovy.com</a>. Chovy's own product terms apply once you sign in at <a href={chovy}>chovy.com</a>.</p>
             </section>
           </div>
         </div>
