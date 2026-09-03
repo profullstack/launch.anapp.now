@@ -195,9 +195,10 @@ export function Footer({ chovyOrigin }: { chovyOrigin: string }) {
         <p className="legend"><b>launch</b> → action · <b>anapp</b> → the thing in your head · <b>now</b> → stop waiting</p>
         <nav aria-label="Footer">
           <a href={chovyOrigin} rel="noopener">Chovy</a>
-          <a href={`${chovyOrigin}/privacy`} rel="noopener">Privacy</a>
-          <a href={`${chovyOrigin}/terms`} rel="noopener">Terms</a>
-          <a href="#faq">FAQ</a>
+          <a href={`${chovyOrigin}/how-it-works`} rel="noopener">How it works</a>
+          <a href={`${chovyOrigin}/pricing`} rel="noopener">Pricing</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/#faq">FAQ</a>
         </nav>
         <p>© {new Date().getFullYear()} Chovy. Your idea stays private until you say otherwise.</p>
       </div>
