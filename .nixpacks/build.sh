@@ -1,1 +1,0 @@
-docker build /home/anthony/.claude/jobs/c41b501f/dev2-launch.anapp.now-rvbw41tm -f /home/anthony/.claude/jobs/c41b501f/dev2-launch.anapp.now-rvbw41tm/.nixpacks/Dockerfile -t ac6976a4-9620-4765-a2a9-52e44c0c7dd8 --build-arg CI=true --build-arg NIXPACKS_METADATA=node --build-arg NODE_ENV=production --build-arg NPM_CONFIG_PRODUCTION=false
