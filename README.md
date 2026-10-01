@@ -3,20 +3,20 @@
 Top-of-funnel campaign site for [Chovy](https://chovy.com). One job: get a
 visitor to type an app idea and carry it straight into Chovy without retyping.
 
-Next.js 16, TypeScript, pnpm, Node 24. No database: ideas and funnel events are
+Next.js 16, TypeScript, Bun (package manager and runtime). No database: ideas and funnel events are
 forwarded server-to-server to Chovy's campaign API (`chovy-ai` repo,
 `/api/campaign/*`), which is where the experiment report lives.
 
 ## Run
 
 ```
-pnpm install
+bun install
 cp .env.example .env      # fill CHOVY_CAMPAIGN_SECRET (same value as Chovy's CAMPAIGN_SECRET)
-pnpm dev
+bun dev
 ```
 
-`pnpm test` runs the unit tests (allocation, cookie, validation) with `node --test`.
-`pnpm build` type-checks and builds. `pnpm creatives:placeholders` regenerates the
+`bun run test` runs the unit tests (allocation, cookie, validation) with `bun test`.
+`bun run build` type-checks and builds. `bun run creatives:placeholders` regenerates the
 stand-in hero images (see below).
 
 ## How it fits together
@@ -65,7 +65,8 @@ side, keyed by the same anonymous session, and reports everything at
 
 ## Deploy
 
-Railway service from this repo (Nixpacks, `pnpm start`, health check `/healthz`).
+dev2 builds `.nixpacks/Dockerfile` (a hand-written `oven/bun` image running the Next
+standalone server with `bun server.js`) on every merge to main; health check `/healthz`.
 Variables: see `.env.example`. Point `launch.anapp.now` at the service's domain
 and set `SITE_ORIGIN=https://launch.anapp.now`. The apex `anapp.now` should 301
 to the campaign host.

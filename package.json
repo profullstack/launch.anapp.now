@@ -3,16 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.32.1",
-  "engines": {
-    "node": ">=24"
-  },
+  "packageManager": "bun@1.4.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "dev": "bun --bun next dev",
+    "build": "bun --bun next build",
+    "start": "bun --bun next start -p ${PORT:-3000}",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/lib/*.test.ts",
+    "test": "bun test src/lib",
     "creatives:placeholders": "python3 scripts/make-placeholder-creatives.py"
   },
   "dependencies": {
