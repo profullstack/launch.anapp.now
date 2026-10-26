@@ -339,3 +339,13 @@ h1, h2, h3, p { margin: 0; }
   .js .reveal { opacity: 1; transform: none; }
   .steps .step:not(.active) { opacity: 1; }
 }
+
+/* Profullstack fleet footer (webring row + network line), after the site footer.
+   The site is light-only (color-scheme: light), so pin the network line's colors
+   to the paper theme instead of its own dark-mode palette. */
+.fleet-foot { padding: 0 var(--gutter) 1.5rem; color: var(--muted); font-size: 0.85rem; }
+.fleet-foot .pfs-footer { --pfs-footer-muted: var(--muted); max-width: var(--measure); margin: 0 auto; }
+.fleet-foot .pfs-footer a:hover { color: var(--blue); }
+.fleet-foot .net-foot { color: var(--muted); }
+.fleet-foot .net-foot b { color: var(--ink); }
+.fleet-foot .net-foot-links > a, .fleet-foot .net-foot a:focus-visible { color: var(--blue-deep); outline-color: var(--blue-deep); }
