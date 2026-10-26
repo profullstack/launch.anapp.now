@@ -13,6 +13,7 @@
     "creatives:placeholders": "python3 scripts/make-placeholder-creatives.py"
   },
   "dependencies": {
+    "@profullstack/footer": "0.3.0",
     "geist": "^1.8.2",
     "next": "16.4.3",
     "react": "19.3.1",

@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { siteOrigin } from "@/lib/env.ts";
+import { FleetFooter } from "@/components/FleetFooter.tsx";
 
 const TITLE = "Launch an App Now — Turn Your Idea Into a Real Product | Chovy";
 const DESCRIPTION = "Have an app idea? Start with one sentence. Chovy helps turn it into a clear product plan, working software, and previews you can review.";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         {children}
+        <FleetFooter />
       </body>
     </html>
   );
