@@ -12,7 +12,7 @@
 # answers /healthz for the deploy health check, reads its env from app.env at run
 # time. No build args.
 
-FROM oven/bun:1.4.0-slim AS deps
+FROM oven/bun:1.4.4-slim AS deps
 WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
@@ -23,7 +23,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # `bun --bun next build` (the build script): Next runs on Bun, not Node.
 RUN bun run build
 
-FROM oven/bun:1.4.0-slim AS runtime
+FROM oven/bun:1.4.4-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
